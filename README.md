@@ -36,7 +36,7 @@ npm install
 
 ## Usage
 
-`node ./bin/occs [options] [command] [parameters] `
+`occs-cli [options] [command] [parameters] `
 OCCS CLI 0.1.0
 
 Usage: occs [options] [command] [parameters]
@@ -68,7 +68,7 @@ General parameters applicable to most commands:
 #### login
 Log in to Oracle CCS and store the session.
 
-`node ./bin/occs login -u USERNAME -p PASSWORD --customer CUSTOMER --region REGION --tenancy TENANCY`
+`occs-cli login -u USERNAME -p PASSWORD --customer CUSTOMER --region REGION --tenancy TENANCY`
 
 Unsure what to use? Look at the URL used to access CCS:
 `https://[customer].[region].oraclecloud.com/[tenancy]/ui/Configuration/index.html`
@@ -76,13 +76,13 @@ Unsure what to use? Look at the URL used to access CCS:
 #### get-everything
 Downloads all CCS data including packages, documents, layouts, contents, styles, and fonts.
 
-`node ./bin/occs get-everything`
+`occs-cli get-everything`
 
 #### list-[objectType]
 
 Download raw metadata for the object type (e.g. packages, documents, contents, styles, fonts)
 
-`node ./bin/occs list-[objectType]` where `objectType` is one of:
+`occs-cli list-[objectType]` where `objectType` is one of:
 * documents
 * layouts
 * contents
@@ -93,13 +93,13 @@ Download raw metadata for the object type (e.g. packages, documents, contents, s
 
 Generates flat catalogs of all CCS components for quick overview. Separate CSV files are generated for each object type in the "catalog" subdirectory of the output directory.
 
-`node ./bin/occs report-catalog`
+`occs-cli report-catalog`
 
 #### report-xref
 
 Generate a cross-reference CSV of relationships across documents, layouts, contents, styles, fonts, and fields. The file is output in the "crossref" subdirectory of the output directory.
 
-`node ./bin/occs report-xref`
+`occs-cli report-xref`
 
 #### graph
 
@@ -107,16 +107,16 @@ Generate .dot and .svg graphs for document-object relationships. Output is writt
 
 To generate a graph for a specific document, use the `-d,--document` option with the name of the document, e.g.:
 
-`node ./bin/occs graph -d CO-G1-CO1`
+`occs-cli graph -d CO-G1-CO1`
 
 Issue the command without the `-d,--document` option to generate graphs for all documents.
 
-`node ./bin/occs graph`
+`occs-cli graph`
 
 ##### Options
 Options can be combined.
-* `-s,--styles`: Include styles (Note this may clutter the graph), e.g. `node ./bin/occs graph -d CO-G1-CO1 -s`
-* `-f,--fields`: Include fields (Note this may clutter the graph), e.g. `node ./bin/occs graph -d CO-G1-CO1 -f`
+* `-s,--styles`: Include styles (Note this may clutter the graph), e.g. `occs-cli graph -d CO-G1-CO1 -s`
+* `-f,--fields`: Include fields (Note this may clutter the graph), e.g. `occs-cli graph -d CO-G1-CO1 -f`
 
 
 # File Structure

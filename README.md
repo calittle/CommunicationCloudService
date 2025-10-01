@@ -29,7 +29,7 @@ Use brew to install prerequisites.
 ## Installation
 
 ```
-git clone https://github.com/your-org/occs-cli.git
+git clone https://github.com/calittle/OCCS-CLI.git
 cd occs-cli
 npm install
 ```

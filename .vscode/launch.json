@@ -1,0 +1,77 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "OCCS-CLI report-xref",
+      "program": "${workspaceFolder}/bin/occs.js",
+      "args": ["report-xref"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "OCCS-CLI report-catalog",
+      "program": "${workspaceFolder}/bin/occs.js",
+      "args": ["report-catalog"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+        {
+      "type": "node",
+      "request": "launch",
+      "name": "OCCS-CLI graph",
+      "program": "${workspaceFolder}/bin/occs.js",
+      "args": ["graph","-s"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "OCCS-CLI list-styles",
+      "program": "${workspaceFolder}/bin/occs.js",
+      "args": ["list-styles"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },    
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "OCCS-CLI list-packages",
+      "program": "${workspaceFolder}/bin/occs.js",
+      "args": ["list-packages"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "OCCS-CLI list-documents",
+      "program": "${workspaceFolder}/bin/occs.js",
+      "args": ["list-documents"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "OCCS-CLI list-layouts",
+      "program": "${workspaceFolder}/bin/occs.js",
+      "args": ["list-layouts"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "OCCS-CLI list-contents",
+      "program": "${workspaceFolder}/bin/occs.js",
+      "args": ["list-contents"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

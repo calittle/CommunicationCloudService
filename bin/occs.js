@@ -10,6 +10,8 @@ import { listFontsCommand } from '../lib/fonts.js';
 import { catalogCommand } from '../lib/catalog.js';
 import { crossrefCommand } from '../lib/crossRef.js';
 import { graphCommand } from '../lib/graph.js';
+import { listCompaniesCommand } from '../lib/companies.js';
+import { listConfigsCommand } from '../lib/configs.js';
 
 const program = new Command();
 function showBanner() {
@@ -23,6 +25,19 @@ program
   .version('0.1.0');
 
 program
+  .command('list-companies')
+  .description('Generate list of companies')
+  .option('-o, --output <dir>', 'Path to output folder')  
+  .action(listCompaniesCommand);
+
+program
+  .command('list-configs')
+  .description('Generate list of open configuration IDs')
+  .option('-o, --output <dir>', 'Path to output folder')  
+  .action(listConfigsCommand);
+
+
+  program
   .command('report-catalog')
   .description('Generate flat catalog of all CCS components')
   .option('-o, --output <dir>', 'Path to output folder', './output')  
@@ -49,9 +64,9 @@ program
   .description('Log in to Oracle CCS and store session')
   .requiredOption('-u, --username <username>', 'Username')
   .requiredOption('-p, --password <password>', 'Password')
-  .requiredOption('--customer <customer>', 'Customer short name')
-  .requiredOption('--region <region>', 'Oracle region')
-  .requiredOption('--tenancy <tenancy>', 'Tenancy path')
+  .requiredOption('-c, --customer <customer>', 'Customer short name')
+  .requiredOption('-r, --region <region>', 'Oracle region')
+  .requiredOption('-t, --tenancy <tenancy>', 'Tenancy path')
   .action(loginCommand);
 
 

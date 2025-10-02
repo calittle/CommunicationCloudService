@@ -4,6 +4,15 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "list-configs",
+      "program": "${workspaceFolder}/bin/occs.js",
+      "args": ["list-configs"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "OCCS-CLI report-xref",
       "program": "${workspaceFolder}/bin/occs.js",
       "args": ["report-xref"],
